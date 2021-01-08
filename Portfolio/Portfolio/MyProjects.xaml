@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Portfolio.MyProjects">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <Frame BackgroundColor="#788B91" HeightRequest="30">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <ImageButton 
+                        Source="Profile.png"
+                        Clicked="Main_Clicked"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        WidthRequest="85"
+                        BackgroundColor="#788B91"/>
+                    <ImageButton 
+                        Source="Project.png"
+                        Clicked="Project_Clicked"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        WidthRequest="85"
+                        BackgroundColor="#788B91"/>
+                    <ImageButton 
+                        Source="CV.png"
+                        Clicked="CV_Clicked"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        WidthRequest="85"
+                        BackgroundColor="#788B91"/>
+                    <ImageButton 
+                        Source="Contact.png"
+                        Clicked="Contact_Clicked"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center" 
+                        WidthRequest="85"
+                        BackgroundColor="#788B91" />
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#CFD8DC" HeightRequest="200">
+                <StackLayout>
+                    <Frame
+                        CornerRadius="100"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        Padding="0"
+                        IsClippedToBounds="True" >
+                        <Image 
+                            Source="elevbilled.jpg" 
+                            Scale="1.5"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                    </Frame>
+                    <Label 
+                        Text="Niklas Christensen" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" 
+                        FontSize="24" 
+                        TextColor="#9DA6A9" />
+                    <Label 
+                        Text="Viborg, Denmark" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" 
+                        FontSize="18" 
+                        TextColor="#9DA6A9" />
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#455357" HeightRequest="50">
+                <StackLayout>
+                    <Label 
+                        Text="My Projects" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" 
+                        FontSize="24" 
+                        TextColor="#7B8D93" />
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#CFD8DC" HeightRequest="300">
+                <ScrollView>
+                    <ListView x:Name="GalleryView" ItemsSource="{Binding Gallery}" HasUnevenRows="True" SelectionMode="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image 
+                                            Grid.RowSpan="2" 
+                                            Source="{Binding Images}" 
+                                            Aspect="AspectFit"
+                                            HeightRequest="100"
+                                            WidthRequest="100" />
+                                        <Label
+                                            Grid.Column="1"
+                                            Text="{Binding Name}"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Center"
+                                            FontAttributes="Bold" />
+                                        <Label 
+                                            Grid.Row="1"
+                                            Grid.Column="1"
+                                            Text="{Binding Description}"
+                                            VerticalOptions="Start" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

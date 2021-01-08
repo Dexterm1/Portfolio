@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Portfolio.MainPage">
+    <StackLayout Spacing="0">
+        <Frame BackgroundColor="#788B91" HeightRequest="30">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <ImageButton 
+                    Source="Profile.png"
+                    Clicked="Main_Clicked"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    WidthRequest="85"
+                    BackgroundColor="#788B91"/>
+                <ImageButton 
+                    Source="Project.png"
+                    Clicked="Project_Clicked"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    WidthRequest="85"
+                    BackgroundColor="#788B91"/>
+                <ImageButton 
+                    Source="CV.png"
+                    Clicked="CV_Clicked"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    WidthRequest="85"
+                    BackgroundColor="#788B91"/>
+                <ImageButton 
+                    Source="Contact.png"
+                    Clicked="Contact_Clicked"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center" 
+                    WidthRequest="85"
+                    BackgroundColor="#788B91" />
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#CFD8DC" HeightRequest="200">
+            <StackLayout>
+                <Frame
+                    CornerRadius="100"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    HorizontalOptions="Center"
+                    Padding="0"
+                    IsClippedToBounds="True" >
+                    <Image 
+                        Source="elevbilled.jpg" 
+                        Scale="1.5"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+                </Frame>
+                <Label 
+                    Text="Niklas Christensen"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" 
+                    FontSize="24" 
+                    TextColor="#9DA6A9" />
+                <Label 
+                    Text="Viborg, Denmark"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" 
+                    FontSize="18" 
+                    TextColor="#9DA6A9" />
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#455357" HeightRequest="350">
+            <StackLayout>
+                <Label 
+                    Text="About me" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" 
+                    FontSize="24" 
+                    TextColor="#7B8D93" />
+                <Label 
+                    Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                    FontSize="19" 
+                    TextColor="#7B8D93" />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
